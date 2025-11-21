@@ -90,7 +90,7 @@ case "${host}" in
 
   *-freebsd*)
     SECTION_FLAGS='-ffunction-sections -fdata-sections'
-    AC_SUBST(SECTION_FLAGS) 
+    AC_SUBST(SECTION_FLAGS)
     GLIBCXX_CHECK_LINKER_FEATURES
     AC_DEFINE(HAVE_SETENV)
     AC_DEFINE(HAVE_FINITEF)
@@ -134,6 +134,9 @@ case "${host}" in
     AC_CHECK_FUNCS(timespec_get)
     AC_CHECK_FUNCS(sockatmark)
     AC_CHECK_FUNCS(uselocale)
+    ;;
+
+  powerpc64-PSL1GHT-elf*)
     ;;
 
   *-fuchsia*)
@@ -200,7 +203,7 @@ case "${host}" in
     ;;
   *-netbsd* | *-openbsd*)
     SECTION_FLAGS='-ffunction-sections -fdata-sections'
-    AC_SUBST(SECTION_FLAGS) 
+    AC_SUBST(SECTION_FLAGS)
     GLIBCXX_CHECK_LINKER_FEATURES
     AC_DEFINE(HAVE_FINITEF)
     AC_DEFINE(HAVE_FINITE)
@@ -221,7 +224,7 @@ case "${host}" in
     ;;
   *-qnx6.1* | *-qnx6.2*)
     SECTION_FLAGS='-ffunction-sections -fdata-sections'
-    AC_SUBST(SECTION_FLAGS) 
+    AC_SUBST(SECTION_FLAGS)
     GLIBCXX_CHECK_LINKER_FEATURES
     AC_DEFINE(HAVE_COSF)
     AC_DEFINE(HAVE_COSL)

@@ -3001,6 +3001,18 @@ powerpc*-*-freebsd*)
 		;;
 	esac
 	;;
+powerpc64-PSL1GHT-elf*)	
+	tm_file="${tm_file} elfos.h gnu-user.h usegas.h freebsd-spec.h newlib-stdint.h rs6000/sysv4.h rs6000/default64.h"
+	tm_file="${tm_file} rs6000/biarch64.h rs6000/psl1ght.h"
+	if test x${enable_secureplt} = xyes; then
+		tm_file="rs6000/secureplt.h ${tm_file}"
+	fi
+	extra_options="${extra_options} rs6000/sysv4.opt rs6000/linux64.opt"
+	tmake_file="rs6000/t-fprules rs6000/t-fprules-fpbit rs6000/t-ppcgas rs6000/t-ppccomm"
+	gas=yes
+	gnu_ld=yes
+	default_use_cxa_atexit=yes
+	;;
 powerpc-*-netbsd*)
 	tm_file="${tm_file} elfos.h gnu-user.h ${nbsd_tm_file} freebsd-spec.h rs6000/sysv4.h rs6000/netbsd.h"
 	extra_options="${extra_options} netbsd.opt netbsd-elf.opt"

@@ -1776,6 +1776,20 @@ static const scoped_attribute_specs *const rs6000_attribute_table[] =
 #undef TARGET_CONST_ANCHOR
 #define TARGET_CONST_ANCHOR 0x8000
 
+#if defined(POWERPC_CELL64LV2) || \
+    defined(POWERPC_PSL1GHT)
+
+#undef TARGET_VALID_POINTER_MODE
+#define TARGET_VALID_POINTER_MODE rs6000_cell64lv2_psl1ght_valid_pointer_mode
+
+static bool
+rs6000_cell64lv2_psl1ght_valid_pointer_mode(scalar_int_mode mode)
+{
+  return mode == SImode || (TARGET_64BIT && mode == DImode) || mode == ptr_mode || mode == Pmode;
+}
+
+#endif
+
 
 
 /* Processor table.  */

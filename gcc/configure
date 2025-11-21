@@ -33062,7 +33062,7 @@ $as_echo "#define HAVE_LD_PPC_GNU_ATTR_LONG_DOUBLE 1" >>confdefs.h
 esac
 
 case "$target:$tm_file" in
-  powerpc64*-*-freebsd* | powerpc64*-*-linux* | powerpc*-*-linux*rs6000/biarch64.h*)
+  powerpc64*-*-freebsd* | powerpc64*-PSL1GHT-elf* | powerpc64*-*-linux* | powerpc*-*-linux*rs6000/biarch64.h*)
   case "$target" in
      *le-*-linux*)
      emul_name="-melf64lppc"
@@ -33075,6 +33075,9 @@ case "$target:$tm_file" in
       ;;
      *-*-freebsd*)
      emul_name="-melf64ppc_fbsd"
+      ;;
+     *-PSL1GHT-elf*)
+     emul_name="-melf64ppc"
       ;;
   esac
     { $as_echo "$as_me:${as_lineno-$LINENO}: checking linker support for omitting dot symbols" >&5
