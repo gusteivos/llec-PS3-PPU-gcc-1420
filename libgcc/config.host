@@ -1233,7 +1233,7 @@ powerpc*-*-freebsd*)
 	  ;;
 	esac
 	;;
-powerpc64-PSL1GHT-elf*)
+powerpc64-PSL1GHT-elf* | powerpc64-ps3-elf*)
 	tmake_file="$tmake_file rs6000/t-crtstuff"
 	;;
 powerpc-*-netbsd*)

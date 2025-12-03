@@ -3001,7 +3001,7 @@ powerpc*-*-freebsd*)
 		;;
 	esac
 	;;
-powerpc64-PSL1GHT-elf*)	
+powerpc64-PSL1GHT-elf* | powerpc64-ps3-elf*)	
 	tm_file="${tm_file} elfos.h gnu-user.h usegas.h freebsd-spec.h newlib-stdint.h rs6000/sysv4.h rs6000/default64.h"
 	tm_file="${tm_file} rs6000/biarch64.h rs6000/psl1ght.h"
 	if test x${enable_secureplt} = xyes; then

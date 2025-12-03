@@ -136,7 +136,7 @@ case "${host}" in
     AC_CHECK_FUNCS(uselocale)
     ;;
 
-  powerpc64-PSL1GHT-elf*)
+  powerpc64-PSL1GHT-elf* | powerpc64-ps3-elf*)
     ;;
 
   *-fuchsia*)
