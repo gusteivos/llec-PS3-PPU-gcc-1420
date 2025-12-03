@@ -313,7 +313,9 @@ extern int dot_symbols;
 #undef	LINK_OS_DEFAULT_SPEC
 #define LINK_OS_DEFAULT_SPEC "%(link_os_lv2)"
 
-#define LIB_LV2_SPEC "-L %:getenv(PSL1GHT /ppu/lib) --start-group -lsysbase -lc -lrt -llv2 --end-group"
+
+#define LIB_LV2_SPEC "-L %:getenv(PSL1GHT /ppu/lib) --start-group -lc %{mlibgloss: -lgloss} %{!mno-libsysbase: -lsysbase} -llv2 -lrt --end-group"
+
 
 #define GLIBC_DYNAMIC_LINKER32 "%(dynamic_linker_prefix)/lib/ld.so.1"
 

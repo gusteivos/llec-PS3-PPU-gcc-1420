@@ -3007,7 +3007,7 @@ powerpc64-PSL1GHT-elf*)
 	if test x${enable_secureplt} = xyes; then
 		tm_file="rs6000/secureplt.h ${tm_file}"
 	fi
-	extra_options="${extra_options} rs6000/sysv4.opt rs6000/linux64.opt"
+	extra_options="${extra_options} rs6000/sysv4.opt rs6000/linux64.opt rs6000/psl1ght.opt"
 	tmake_file="rs6000/t-fprules rs6000/t-fprules-fpbit rs6000/t-ppcgas rs6000/t-ppccomm"
 	gas=yes
 	gnu_ld=yes

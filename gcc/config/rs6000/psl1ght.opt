@@ -1,0 +1,14 @@
+
+; rs6000 PSL1GHT options.
+
+
+mlibgloss
+Target
+Link libgloss.
+
+mno-libsysbase
+Target
+Do not link libsysbase.
+
+
+; This comment is to ensure we retain the blank line above.
